@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume</title>
+    <link rel="stylesheet" href="./css/view.css">
+    <link rel="stylesheet" href="./css/profolio.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <link href="css/lightbox.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- //自我介紹 -->
+    <div class="leftBox">
+        <div class="pic"><img src="./images/pic.svg" alt="大頭貼"></div>
+        <div class="myNameBox">
+            <div class="name">陳欣詩<span>Shin Shri Chen</span></div>
+            <div class="redText">Front-End Developing Learner </div>
+            <div class="birthday">1993/03/19 Taipei, Taiwan</div>
+            <div class="introduce">從平面影像設計到網頁設計再到 網路前端製作，喜歡觀察人、喜 歡嘗試不同的東西，偶而繪製些 小插畫，畫些小故事。</div>
+
+        </div>
+        <div class="linkBigBox">
+            <div class="contact">
+                <div class="mail"><img src="./images/mail.svg" alt="mailIcon"></div>
+                <p>flinder410010@gmail.com</p>
+            </div>
+            <p class="tel">TEL <span>0925-752-586</span></p>
+            <a href="./index.html">
+                <div class="linkBox">關於我<br><span>About me</span></div>
+            </a>
+            <a href="./profolio.html">
+                <div class="linkBox linkBox2">作品集<br><span>Profolio</span></div>
+            </a>
+        </div>
+    </div>
+    <div class="toFixed"></div>
+    <!-- //右邊 -->
+    <div class="rightBox">
+            <div class="p">建議使用 Chrome 瀏覽器 1450 x 720以上 ，以確保最佳瀏覽效果</div>
+        <div class="whiteBox">
+            <div class="upBox"><img src="./images/up.svg" alt="上一頁" class="up"><p class="upText">回上一頁</p>
+            </div>
+
+            <div class="pigPic"><img src="./images/pic7.png" alt="作品主圖"></div>
+            <div class="textBox">
+                <div class="smallTextBox">
+                    <div class="titleText">模擬一支手機｜功能實作</div>
+                    <a href="https://codepen.io/geladaa/full/qKyqyv" class="btn" target="_blank"> <div class="watchBtn">點我到連結</div></a>
+                </div>
+                <div class="detailText">
+                    <div class="textIn">用簡易的程式碼去寫出一個具有動態效果的畫面</div>
+                    <div class="useTitle">使用技術</div>
+                    <div class="use">
+                        <ul>
+                            <li>前端程式開發: Pug/Sass/Jquery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- 燈箱 -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <!-- func -->
+    <script type="text/javascript">
+        var s = skrollr.init();
+
+    //回上一頁
+    $(".upBox").click(function(){
+        history.back();
+    })
+
+    </script>
+</body>
+
+</html>

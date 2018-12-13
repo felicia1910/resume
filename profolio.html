@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume</title>
+    <link rel="stylesheet" href="./css/view.css">
+    <link rel="stylesheet" href="./css/profolio.css">
+</head>
+
+<body>
+    <!-- //自我介紹 -->
+    <div class="leftBox">
+        <div class="pic"><img src="./images/pic.svg" alt="大頭貼"></div>
+        <div class="myNameBox">
+            <div class="name">陳欣詩<span>Shin Shri Chen</span></div>
+            <div class="redText">Front-End Developing Learner </div>
+            <div class="birthday">1993/03/19 Taipei, Taiwan</div>
+            <div class="introduce">從平面影像設計到網頁設計再到 網路前端製作，喜歡觀察人、喜 歡嘗試不同的東西，偶而繪製些 小插畫，畫些小故事。</div>
+
+        </div>
+        <div class="linkBigBox">
+            <div class="contact">
+                <div class="mail"><img src="./images/mail.svg" alt="mailIcon"></div>
+                <p>flinder410010@gmail.com</p>
+            </div>
+            <p class="tel">TEL <span>0925-752-586</span></p>
+            <a href="./index.html">
+                <div class="linkBox">關於我<br><span>About me</span></div>
+            </a>
+            <a href="./profolio.html">
+                <div class="linkBox linkBox2">作品集<br><span>Profolio</span></div>
+            </a>
+        </div>
+    </div>
+    <div class="toFixed"></div>
+    <!-- //右邊 -->
+    <div class="rightBox">
+            <div class="p">建議使用 Chrome 瀏覽器 1450 x 720以上 ，以確保最佳瀏覽效果</div>
+        <div class="whiteBox whiteBox_pro">
+            <div class="longColorLine"></div>
+            <div class="filterBox filterBoxClick">
+                <div class="clickBox clickBox1"></div>
+                <div class="clickBox clickBox2"></div>
+                <div class="clickBox clickBox3"></div>
+                <div class="clickBox clickBox4"></div>
+                <div class="clickBox clickBox5"></div>
+            </div>
+            <div class="filterBox">
+                <div class="filterItem filterItem1" data-thing-value="all">全部</div>
+                <div class="filterItem filterItem2" data-thing-value="web">網頁設計</div>
+                <div class="filterItem filterItem3" data-thing-value="cob">臨摹網站</div>
+                <div class="filterItem filterItem4" data-thing-value="test">功能實作</div>
+                <div class="filterItem filterItem5" data-thing-value="ai">平面設計</div>
+            </div>
+            <div class="allItemBox">
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        var s = skrollr.init();
+        //迴圈填資料
+        var sliderPic = ["pic1.png", "pic2.png", "pic3.png", "pic4.png", "pic5.png", "pic6.png", "pic7.png", "pic8.png", "pic9.png"];
+        var sliderTitle = ["動物SINGLE50", "知音文創", "專業經理人", "GravityDaze", "livetools", "天氣盒子", "模擬一支手機", "App音樂平台設計", "平面設計整合"];
+
+        var sliderText = [
+            "一個人寂寞在家無法出門的寵物，是該讓他們在家也可以交朋友!",
+            "知名文創品牌，模擬出一個後台網站!",
+            "實際臨摹一個網站!",
+            "實際臨摹一個網站!",
+            "實際臨摹一個網站!",
+            "用CodePen實作一個小頁面",
+            "用CodePen實作一個小頁面",
+            "平面設計，設計一個app頁面",
+            "平面設計各類細項整理"
+        ];
+
+        var sliderData = ["web", "web", "cob", "cob", "cob", "test", "test", "ai", "ai"];
+        var sliderWeb = ["animals", "jeancultural", "manager", "gravitydaze", "livetools", "weather", "phone", "appdesign", "goods"];
+        var sliderPicCount = sliderPic.length;
+
+        for (let $i = 0; $i < sliderPicCount; $i++) {
+            $(".allItemBox").append(
+                `<div class="ItemBox" data-value=${sliderData[$i]}>
+                    <a href="./${sliderWeb[$i]}.html">
+                    <div class="itemPic"><img src="./images/${sliderPic[$i]}" alt="截圖"></div>
+                    </a>
+                    <div class="itemTitle">${sliderTitle[$i]}</div>
+                    <div class="itemText">${sliderText[$i]}</div></div>`);
+
+        }
+
+        //CLICK篩選
+        $(".filterItem1").click(function () {
+            $(".clickBox").css("opacity", "0");
+            $(".clickBox1").css("opacity", "1");
+        })
+        $(".filterItem2").click(function () {
+            $(".clickBox").css("opacity", "0");
+            $(".clickBox2").css("opacity", "1");
+        })
+        $(".filterItem3").click(function () {
+            $(".clickBox").css("opacity", "0");
+            $(".clickBox3").css("opacity", "1");
+        })
+        $(".filterItem4").click(function () {
+            $(".clickBox").css("opacity", "0");
+            $(".clickBox4").css("opacity", "1");
+        })
+        $(".filterItem5").click(function () {
+            $(".clickBox").css("opacity", "0");
+            $(".clickBox5").css("opacity", "1");
+        })
+        $(".filterItem").click(function(){
+            $(".filterItem").css("color","#999999");
+            $(this).css("color","#ffffff");
+        })
+
+        //篩選
+        $(".filterItem").click(function () {
+            $(".ItemBox").hide();
+
+            if ($(this).data("thingValue") == 'all') {
+
+                $(".ItemBox").show();
+            } else {
+                $("div[data-value='" + $(this).data("thingValue") + "']").show();
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>
