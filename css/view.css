@@ -16,17 +16,19 @@ a {
 /* 卡住用的 */
 
 body {
-    max-width: 1920px;
-    min-width: 1450px;
+    /* max-width: 1920px; */
+    /* min-width: 1450px; */
+    width: 100%;
     display: grid;
     grid-template-columns: 300px auto;
 }
 
 /* 左邊區域 */
-.p{
+
+.p {
     text-align: center;
     font-size: 14px;
-    color:#eee;
+    color: #eee;
     padding: 10px;
     opacity: 0;
     animation: WhiteBox 1.5s 1;
@@ -47,6 +49,8 @@ body {
     text-align: center;
     line-height: 24px;
     z-index: 2;
+    overflow: hidden;
+    transition: .2s;
 }
 
 .pic {
@@ -458,6 +462,15 @@ button {
 .btn-5 span:hover:after {
     width: 100%;
 }
+.pingMe{
+    padding: 20px 40px;
+}
+
+/*藏起來的*/
+
+.clickBoxNav{
+    display: none;
+}
 
 @keyframes ani1 {
     from {
@@ -496,6 +509,7 @@ button {
         transform: translateY(0%);
     }
 }
+
 @keyframes LeftBox {
     from {
         opacity: 0;
@@ -504,5 +518,78 @@ button {
     to {
         opacity: 1;
         transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    body {
+        /* max-width: 1920px; */
+        /* min-width: 1450px; */
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .leftBox {
+        width: 0;
+    }
+    .toFixed {
+        display: none;
+    }
+  
+    .clickBoxNav {
+        display: block;
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        left: 10px;
+        top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        cursor: pointer;
+        transition: .8s;
+        z-index: 10;
+    }
+    .threeLine {
+        width: 100%;
+        height: 8px;
+        margin: 6px 0;
+        background-color: #fff;
+    }
+    .leftBox.leftBoxClick {
+      width: 100%;
+    }
+    .linkBigBox.linkBigBoxClick{
+        right: 0;
+        top: 300px;
+    }
+    .myNameBox.myNameBoxClick{
+
+    }
+}
+@media screen and (max-width: 1024px) {
+
+    .redText,.birthday,.introduce{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 875px) {
+
+    .left_right{
+        display: block;
+    }
+    .smallLeftBox,.smallRightBox{
+        width: 100%;
+    }
+    .smallRightBox{
+        border:none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    body{
+        min-width: 375px;
     }
 }

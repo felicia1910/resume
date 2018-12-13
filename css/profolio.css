@@ -122,3 +122,16 @@
 .itemPic img:hover {
     filter: brightness(.5);
 }
+
+@media screen and (max-width: 1024px) {
+
+    .allItemBox {
+        grid-template-columns: 1fr;
+    }
+    .ItemBox{
+        margin: 20px auto;
+    }
+    .itemPic{
+        width: 100%;
+    }
+}
