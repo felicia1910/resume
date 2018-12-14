@@ -53,9 +53,10 @@
     color: #fff;
 }
 
-.filterItem1{
+.filterItem1 {
     color: #fff;
 }
+
 /*刪盒子*/
 
 .whiteBox_pro {
@@ -124,14 +125,33 @@
 }
 
 @media screen and (max-width: 1024px) {
-
     .allItemBox {
         grid-template-columns: 1fr;
     }
-    .ItemBox{
+    .ItemBox {
         margin: 20px auto;
     }
-    .itemPic{
+    .itemPic {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 600px) {
+    .longColorLine,.filterBoxClick{
+        display: none;
+    }
+    .filterBox {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .filterItem{
+        margin: 10px;
+    }
+    .whiteBox_pro{
+        padding: 40px 10px;
+    }
+    .filterItem{
+        font-size: 18px;
+    }
+    
 }

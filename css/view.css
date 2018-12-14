@@ -462,13 +462,14 @@ button {
 .btn-5 span:hover:after {
     width: 100%;
 }
-.pingMe{
+
+.pingMe {
     padding: 20px 40px;
 }
 
 /*藏起來的*/
 
-.clickBoxNav{
+.clickBoxNav {
     display: none;
 }
 
@@ -535,7 +536,6 @@ button {
     .toFixed {
         display: none;
     }
-  
     .clickBoxNav {
         display: block;
         position: fixed;
@@ -557,39 +557,101 @@ button {
         background-color: #fff;
     }
     .leftBox.leftBoxClick {
-      width: 100%;
+        width: 100%;
     }
-    .linkBigBox.linkBigBoxClick{
+    .linkBigBox.linkBigBoxClick {
         right: 0;
         top: 300px;
     }
-    .myNameBox.myNameBoxClick{
-
-    }
+    .myNameBox.myNameBoxClick {}
 }
-@media screen and (max-width: 1024px) {
 
-    .redText,.birthday,.introduce{
+@media screen and (max-width: 1024px) {
+    .redText,
+    .birthday,
+    .introduce {
         display: none;
+    }
+    .linkBigBox {
+        width: 100%;
+    }
+    .contact,
+    .tel,
+    .mail {
+        margin: auto;
+        text-align: center;
+    }
+    .contact,.mail,.contact p{
+        display: inline-block;
+    }
+    .tel {
+        margin-bottom: 10px;
+    }
+    .tel span,.mail{
+        margin-left:0px; 
     }
 }
 
 @media screen and (max-width: 875px) {
-
-    .left_right{
+    .left_right {
         display: block;
     }
-    .smallLeftBox,.smallRightBox{
+    .smallLeftBox,
+    .smallRightBox {
         width: 100%;
     }
-    .smallRightBox{
-        border:none;
+    .smallRightBox {
+        border: none;
     }
 }
 
-@media screen and (max-width: 375px) {
-
-    body{
-        min-width: 375px;
+@media screen and (max-width: 600px) {
+    .whiteBox {
+        width: 100%;
+        padding: 40px 20px;
+        border: none;
+    }
+    .mySkill {
+        padding: 40px 0px;
+        grid-template-columns: 1fr;
+    }
+    .skillBox {
+        margin: 30px 0;
+    }
+    /* 語言能力 */
+    .myLanguage,
+    .inSchool,
+    .myEducation {
+        padding: 40px 0px;
+        flex-wrap: wrap;
+    }
+    .languageBox,
+    .inSchool p,
+    .eduText,
+    .myLicense ul,
+    .workBox {
+        width: 100%;
+        margin: 20px 0px;
+    }
+    .work {
+        margin: 10px 20px 10px -15px;
+    }
+    .colorBox {
+        transform: translateX(-450%)translateY(20%);
+    }
+    .company {
+        margin-left: -15px;
+    }
+    .myLicense ul li {
+        margin-left: 25px;
+    }
+    .pingMe {
+        padding: 10px;
+    }
+    .p {
+        display: none;
+    }
+    .pDown {
+        display: block;
     }
 }
