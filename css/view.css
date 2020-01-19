@@ -240,8 +240,13 @@ body {
     animation-fill-mode: forwards;
 }
 
-.skillColor4,
-.skillColor6 {
+.skillColor4{
+    animation: ani4 1.5s 1;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.skillColor6{
     animation: ani3 1.5s 1;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
@@ -496,7 +501,15 @@ button {
         width: 0;
     }
     to {
-        width: 70%;
+        width: 60%;
+    }
+}
+@keyframes ani4 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75%;
     }
 }
 
